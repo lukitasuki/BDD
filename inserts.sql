@@ -40,6 +40,10 @@ INSERT INTO Vehiculo (Nro_vehiculo, Tipo_de_vehiculo, Patente, modelo, Marca, An
 
 INSERT INTO Vehiculo (Nro_vehiculo, Tipo_de_vehiculo, Patente, modelo, Marca, Anio, Color, Estado_vehiculo, Transmision, Clientes_Nro_cli) VALUES (10, 'Automóvil', 'MN012OP', 'Hatchback', 'Renault', 2022, 'Gris', 'Disponible', 'Manual', 10);
 
+
+
+
+
 INSERT INTO Sucursales (Nro_suc, Ubicacion, Telefono, Email, Apertura, Nombre_fantasia, Cant_empleados, Ciudad, Pais, Horario, Descripcion, Celular_suc) VALUES (1, 'Calle 123, Ciudad 1', 123456789, 'sucursal1@example.com', '2024-05-03', 'Sucursal 1', 10, 'Ciudad 1', 'País 1', '08:00:00', 'Descripción de la sucursal 1', 987654321);
 
 INSERT INTO Sucursales (Nro_suc, Ubicacion, Telefono, Email, Apertura, Nombre_fantasia, Cant_empleados, Ciudad, Pais, Horario, Descripcion, Celular_suc) VALUES (2, 'Avenida 456, Ciudad 2', 234567890, 'sucursal2@example.com', '2024-05-03', 'Sucursal 2', 15, 'Ciudad 2', 'País 2', '09:00:00', 'Descripción de la sucursal 2', 876543210);
@@ -59,6 +63,10 @@ INSERT INTO Sucursales (Nro_suc, Ubicacion, Telefono, Email, Apertura, Nombre_fa
 INSERT INTO Sucursales (Nro_suc, Ubicacion, Telefono, Email, Apertura, Nombre_fantasia, Cant_empleados, Ciudad, Pais, Horario, Descripcion, Celular_suc) VALUES (9, 'Calle Central, Ciudad 9', 901234567, 'sucursal9@example.com', '2024-05-03', 'Sucursal 9', 25, 'Ciudad 9', 'País 9', '16:00:00', 'Descripción de la sucursal 9', 109876543);
 
 INSERT INTO Sucursales (Nro_suc, Ubicacion, Telefono, Email, Apertura, Nombre_fantasia, Cant_empleados, Ciudad, Pais, Horario, Descripcion, Celular_suc) VALUES (10, 'Avenida Principal, Ciudad 10', 123456780, 'sucursal10@example.com', '2024-05-03', 'Sucursal 10', 30, 'Ciudad 10', 'País 10', '17:00:00', 'Descripción de la sucursal 10', 098765432);
+
+
+
+
 
 
 INSERT INTO Empleado (Num_emp, Nombre, Apellido, DNI, Domicilio, Telefono, Cel_emp, Email, Puesto, Antiguedad, Turno, Vacaciones, Nro_suc, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro, fecha_ingreso_emp, Categoria_emp) VALUES (1, 'Juan', 'Pérez', 12345678, 'Calle 123, Ciudad 1', 123456789, 987654321, 'juan@example.com', 'Gerente', '2020-01-01', 'Mañana', '2024-07-01', 1, 1234567890, 'LEG123', 'Obra Social 1', 987654321, 'Sindicato 1', 987654321, 'Seguro 1', 123456789, '2020-01-01', 'Categoría 1');
@@ -83,71 +91,78 @@ INSERT INTO Empleado (Num_emp, Nombre, Apellido, DNI, Domicilio, Telefono, Cel_e
 
 
 
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (1, 'Mantenimiento', 'Revisión general del vehículo', '2024-01-15', '2024-01-20', 2500.00, 4, 123456, 1);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (2, 'Reparación', 'Cambio de aceite y filtros', '2024-02-10', '2024-02-12', 1200.00, 5, 987654, 2);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (3, 'Mantenimiento', 'Alineación y balanceo', '2024-03-05', '2024-03-06', 800.00, 6, 234567, 3);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (4, 'Reparación', 'Cambio de frenos', '2024-04-20', '2024-04-22', 1500.00, 7, 345678, 1);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (5, 'Mantenimiento', 'Limpieza del sistema de inyección', '2024-05-10', '2024-05-11', 600.00, 8, 456789, 2);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (6, 'Reparación', 'Reemplazo de batería', '2024-06-15', '2024-06-16', 900.00, 9, 567890, 3);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (7, 'Mantenimiento', 'Rotación de neumáticos', '2024-07-01', '2024-07-02', 400.00, 10, 678901, 1);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (8, 'Reparación', 'Reparación de sistema de escape', '2024-08-10', '2024-08-12', 1800.00, 4, 789012, 2);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (9, 'Mantenimiento', 'Cambio de bujías', '2024-09-05', '2024-09-06', 500.00, 5, 890123, 3);
-
-INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (10, 'Reparación', 'Reemplazo de radiador', '2024-10-20', '2024-10-22', 2000.00, 6, 901234, 1);
 
 
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (1, 1500.00, 200.00, 100.00, '2024-01-31 15:00:00', 'Transferencia bancaria', 4, 123456789, 'LEGA123', 'Obra Social 1', 987654321, 'Sindicato 1', 111111, 'Seguro 1', 111111111);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (2, 1800.00, 300.00, 0.00, '2024-02-29 15:00:00', 'Cheque', 5, 234567890, 'LEGA456', 'Obra Social 2', 876543210, 'Sindicato 2', 222222, 'Seguro 2', 222222222);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (1, 'Mantenimiento', 'Revisión general del vehículo', '2024-01-15', '2024-01-20', 2500.00, 1, 1, 1);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (3, 2000.00, 500.00, 0.00, '2024-03-31 15:00:00', 'Transferencia bancaria', 6, 345678901, 'LEGA789', 'Obra Social 3', 765432109, 'Sindicato 3', 333333, 'Seguro 3', 333333333);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (2, 'Reparación', 'Cambio de aceite y filtros', '2024-02-10', '2024-02-12', 1200.00, 2, 2, 2);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (4, 1700.00, 100.00, 50.00, '2024-04-30 15:00:00', 'Efectivo', 7, 456789012, 'LEGA012', 'Obra Social 4', 654321098, 'Sindicato 4', 444444, 'Seguro 4', 444444444);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (3, 'Mantenimiento', 'Alineación y balanceo', '2024-03-05', '2024-03-06', 800.00, 3, 3, 3);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (5, 1900.00, 0.00, 0.00, '2024-05-31 15:00:00', 'Cheque', 8, 567890123, 'LEGA345', 'Obra Social 5', 543210987, 'Sindicato 5', 555555, 'Seguro 5', 555555555);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (4, 'Reparación', 'Cambio de frenos', '2024-04-20', '2024-04-22', 1500.00, 4, 4, 4);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (6, 1600.00, 0.00, 0.00, '2024-06-30 15:00:00', 'Transferencia bancaria', 9, 678901234, 'LEGA678', 'Obra Social 6', 432109876, 'Sindicato 6', 666666, 'Seguro 6', 666666666);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (5, 'Mantenimiento', 'Limpieza del sistema de inyección', '2024-05-10', '2024-05-11', 600.00, 5, 5, 5);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seg8. INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (8, 1800.00, 200.00, 100.00, '2024-08-31 15:00:00', 'Efectivo', 4, 789012345, 'LEGA890', 'Obra Social 8', 210987654, 'Sindicato 8', 888888, 'Seguro 8', 888888888);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (6, 'Reparación', 'Reemplazo de batería', '2024-06-15', '2024-06-16', 900.00, 6, 6, 6);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (9, 1900.00, 300.00, 0.00, '2024-09-30 15:00:00', 'Cheque', 5, 901234567, 'LEGA901', 'Obra Social 9', 109876543, 'Sindicato 9', 999999, 'Seguro 9', 999999999);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (7, 'Mantenimiento', 'Rotación de neumáticos', '2024-07-01', '2024-07-02', 400.00, 7, 7, 7);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (10, 1700.00, 100.00, 50.00, '2024-10-31 15:00:00', 'Transferencia bancaria', 6, 123456789, 'LEGA234', 'Obra Social 10', 987654321, 'Sindicato 10', 101010, 'Seguro 10', 101010101);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (8, 'Reparación', 'Reparación de sistema de escape', '2024-08-10', '2024-08-12', 1800.00, 8, 8, 8);
 
-INSERT INTO Pago_Empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (7, 1500.00, 0.00, 100.00, '2024-07-31 15:00:00', 'Transferencia bancaria', 3, 56789012, 'LEGA567', 'Obra Social 7', 32109876, 'Sindicato 7', 777777, 'Seguro 7', 777777777);
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (9, 'Mantenimiento', 'Cambio de bujías', '2024-09-05', '2024-09-06', 500.00, 9, 9, 9);
+
+INSERT INTO Orden_Servicios (Nro_serv, Tipo_serv, Descripcion, fecha_I, Fecha_F, Precio_final, Nro_emp, Nro_vehiculo, Nro_suc) VALUES (10, 'Reparación', 'Reemplazo de radiador', '2024-10-20', '2024-10-22', 2000.00, 10, 10, 10);
 
 
 
 
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (1, 'Efectivo', 500.00, '2024-01-15', 1, 123, 1);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (2, 'Tarjeta', 800.00, '2024-02-20', 1, 456, 2);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (1, 1500.00, 200.00, 100.00, '2024-01-31 15:00:00', 'Transferencia bancaria', 4, 123456789, 'LEGA123', 'Obra Social 1', 987654321, 'Sindicato 1', 111111, 'Seguro 1', 111111111);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (3, 'Transferencia', 1000.00, '2024-03-10', 1, 789, 3);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (2, 1800.00, 300.00, 0.00, '2024-02-29 15:00:00', 'Cheque', 5, 234567890, 'LEGA456', 'Obra Social 2', 876543210, 'Sindicato 2', 222222, 'Seguro 2', 222222222);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (4, 'Cheque', 700.00, '2024-04-05', 0, 234, 4);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (3, 2000.00, 500.00, 0.00, '2024-03-31 15:00:00', 'Transferencia bancaria', 6, 345678901, 'LEGA789', 'Obra Social 3', 765432109, 'Sindicato 3', 333333, 'Seguro 3', 333333333);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (5, 'Tarjeta', 900.00, '2024-05-12', 0, 567, 5);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (4, 1700.00, 100.00, 50.00, '2024-04-30 15:00:00', 'Efectivo', 7, 456789012, 'LEGA012', 'Obra Social 4', 654321098, 'Sindicato 4', 444444, 'Seguro 4', 444444444);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (6, 'Transferencia', 1200.00, '2024-06-25', 1, 890, 6);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (5, 1900.00, 0.00, 0.00, '2024-05-31 15:00:00', 'Cheque', 8, 567890123, 'LEGA345', 'Obra Social 5', 543210987, 'Sindicato 5', 555555, 'Seguro 5', 555555555);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (7, 'Efectivo', 600.00, '2024-07-18', 1, 123, 7);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (6, 1600.00, 0.00, 0.00, '2024-06-30 15:00:00', 'Transferencia bancaria', 9, 678901234, 'LEGA678', 'Obra Social 6', 432109876, 'Sindicato 6', 666666, 'Seguro 6', 666666666);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (8, 'Tarjeta', 950.00, '2024-08-08', 0, 456, 8);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seg8. INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (8, 1800.00, 200.00, 100.00, '2024-08-31 15:00:00', 'Efectivo', 4, 789012345, 'LEGA890', 'Obra Social 8', 210987654, 'Sindicato 8', 888888, 'Seguro 8', 888888888);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (9, 'Transferencia', 1100.00, '2024-09-22', 1, 789, 9);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (9, 1900.00, 300.00, 0.00, '2024-09-30 15:00:00', 'Cheque', 5, 901234567, 'LEGA901', 'Obra Social 9', 109876543, 'Sindicato 9', 999999, 'Seguro 9', 999999999);
 
-INSERT INTO Pago_Servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (10, 'Cheque', 750.00, '2024-10-30', 0, 234, 10);
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (10, 1700.00, 100.00, 50.00, '2024-10-31 15:00:00', 'Transferencia bancaria', 6, 123456789, 'LEGA234', 'Obra Social 10', 987654321, 'Sindicato 10', 101010, 'Seguro 10', 101010101);
+
+INSERT INTO Pago_empleado (Nro_pago, Sueldo, Bonos, Vacaciones, Fecha_pago, Forma_pago, Nro_emp, Cuil_em, Legajo, Obra_social_emp, Nro_obra_emp, Sindicato, Nro_sindicato, Seguro, Nro_seguro) VALUES (7, 1500.00, 0.00, 100.00, '2024-07-31 15:00:00', 'Transferencia bancaria', 3, 56789012, 'LEGA567', 'Obra Social 7', 32109876, 'Sindicato 7', 777777, 'Seguro 7', 777777777);
+
+
+
+
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (1, 'Efectivo', 500.00, '2024-01-15', 1, 1, 1);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (2, 'Tarjeta', 800.00, '2024-02-20', 1, 2, 2);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (3, 'Transferencia', 1000.00, '2024-03-10', 1, 3, 3);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (4, 'Cheque', 700.00, '2024-04-05', 0, 4, 4);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (5, 'Tarjeta', 900.00, '2024-05-12', 0, 5, 5);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (6, 'Transferencia', 1200.00, '2024-06-25', 1, 6, 6);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (7, 'Efectivo', 600.00, '2024-07-18', 1, 7, 7);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (8, 'Tarjeta', 950.00, '2024-08-08', 0, 8, 8);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (9, 'Transferencia', 1100.00, '2024-09-22', 1, 9, 9);
+
+INSERT INTO Pago_servicios (Nro_pago_serv, Metodo_pago, Monto_pago, Fecha_pago, Finalizado, Nro_cli, Nro_serv) VALUES (10, 'Cheque', 750.00, '2024-10-30', 0, 10, 10);
 
 
 

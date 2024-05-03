@@ -1,25 +1,25 @@
 
-CREATE DATABASE IF NOT EXISTS `mydb`;
+CREATE DATABASE IF NOT EXISTS `autolavado`;
 
 -- Schema new_schema1
 
-USE `mydb` ;
+USE `autolavado` ;
 
 
 -- Table `Clientes`
 
 CREATE TABLE IF NOT EXISTS `Clientes` (
   `Nro_cli` INT NOT NULL,
-  `Nombre` VARCHAR(45) NULL,
-  `Apellido` VARCHAR(45) NULL,
-  `DNI` INT NULL,
-  `Telefono` INT(11) NULL,
-  `Email` VARCHAR(20) NULL,
-  `Domicilio_cli` VARCHAR(45) NULL,
-  `Primer_visita` DATE NULL,
-  `Ultima_visita` DATE NULL,
-  `total_de_visitas` INT NULL,
-  `Celular_cli` INT(11) NULL,
+  `Nombre` VARCHAR(45) NOT NULL,
+  `Apellido` VARCHAR(45) NOT NULL,
+  `DNI` INT NOT NULL,
+  `Telefono` INT(11) NOT NULL,
+  `Email` VARCHAR(20) NOT NULL,
+  `Domicilio_cli` VARCHAR(45) NOT NULL,
+  `Primer_visita` DATE,
+  `Ultima_visita` DATE,
+  `total_de_visitas` INT,
+  `Celular_cli` INT(11) NOT NULL,
   PRIMARY KEY (`Nro_cli`)
   );
 
@@ -29,14 +29,14 @@ CREATE TABLE IF NOT EXISTS `Clientes` (
 
 CREATE TABLE IF NOT EXISTS `Vehiculo` (
   `Nro_vehiculo` INT NOT NULL,
-  `Tipo_de_vehiculo` VARCHAR(45) NULL,
-  `Patente` VARCHAR(45) NULL,
-  `modelo` VARCHAR(45) NULL,
-  `Marca` VARCHAR(45) NULL,
-  `Anio` YEAR(1) NULL,
-  `Color` VARCHAR(45) NULL,
-  `Estado_vehiculo` VARCHAR(45) NULL,
-  `Transmision` VARCHAR(45) NULL,
+  `Tipo_de_vehiculo` VARCHAR(45) NOT NULL,
+  `Patente` VARCHAR(45) NOT NULL,
+  `modelo` VARCHAR(45) NOT NULL,
+  `Marca` VARCHAR(45) NOT NULL,
+  `Anio` YEAR(1),
+  `Color` VARCHAR(45),
+  `Estado_vehiculo` VARCHAR(45),
+  `Transmision` VARCHAR(45),
   `Clientes_Nro_cli` INT NOT NULL,
   PRIMARY KEY (`Nro_vehiculo`),
     FOREIGN KEY (`Clientes_Nro_cli`)
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `Empleado` (
   `Apellido` VARCHAR(45) NOT NULL,
   `DNI` INT NOT NULL,
   `Domicilio` VARCHAR(45) NOT NULL,
-  `Telefono` INT NOT NULL,
+  `Telefono` INT(11) NOT NULL,
   `Cel_emp` INT NOT NULL,
   `Email` VARCHAR(45) NOT NULL,
   `Puesto` VARCHAR(45) NOT NULL,
@@ -102,15 +102,15 @@ CREATE TABLE IF NOT EXISTS `Empleado` (
 
 CREATE TABLE IF NOT EXISTS `Orden_Servicios` (
   `Nro_serv` INT NOT NULL,
-  `Tipo_serv` VARCHAR(45) NULL,
-  `Descripcion` VARCHAR(45) NULL,
-  `fecha_I` DATE NULL,
-  `Fecha_F` DATE NULL,
-  `Precio_final` DECIMAL(1) NULL,
+  `Tipo_serv` VARCHAR(45) NOT NULL,
+  `Descripcion` VARCHAR(45) NOT NULL,
+  `fecha_I` DATE NOT NULL,
+  `Fecha_F` DATE NOT NULL,
+  `Precio_final` DECIMAL(1) NOT NULL,
   `Nro_emp` INT NOT NULL,
   `Nro_vehiculo` INT NOT NULL,
   `Nro_suc` INT NOT NULL,
-  PRIMARY KEY (`Nro_serv`, `Nro_emp`, `Nro_vehiculo`, `Nro_suc`),
+  PRIMARY KEY (`Nro_serv`),
     FOREIGN KEY (`Nro_vehiculo`)
     REFERENCES `Vehiculo` (`Nro_vehiculo`),
     FOREIGN KEY (`Nro_emp`)
@@ -150,10 +150,10 @@ CREATE TABLE IF NOT EXISTS `Pago_empleado` (
 
 CREATE TABLE IF NOT EXISTS `Pago_servicios` (
   `Nro_pago_serv` INT NOT NULL,
-  `Metodo_pago` VARCHAR(8) NULL,
-  `Monto_pago` DECIMAL(1) NULL,
-  `Fecha_pago` DATE NULL,
-  `Finalizado` TINYINT NULL,
+  `Metodo_pago` VARCHAR(8) NOT NULL,
+  `Monto_pago` DECIMAL(1) NOT NULL,
+  `Fecha_pago` DATE,
+  `Finalizado` TINYINT,
   `Nro_cli` INT NOT NULL,
   `Nro_serv` INT NOT NULL,
   PRIMARY KEY (`Nro_pago_serv`, `Nro_cli`, `Nro_serv`),
@@ -169,12 +169,12 @@ CREATE TABLE IF NOT EXISTS `Pago_servicios` (
 
 CREATE TABLE IF NOT EXISTS `Productos` (
   `Nro_prod` INT NOT NULL,
-  `Nombre_prod` VARCHAR(45) NULL,
-  `Precio_prod` DECIMAL(1) NULL,
-  `Descripcion_prod` VARCHAR(45) NULL,
-  `Stock` DECIMAL(1) NULL,
-  `Tipo_prod` VARCHAR(45) NULL,
-  `Fecha_prod` DATE NULL,
+  `Nombre_prod` VARCHAR(45) NOT NULL,
+  `Precio_prod` DECIMAL(1) NOT NULL,
+  `Descripcion_prod` VARCHAR(45),
+  `Stock` DECIMAL(1),
+  `Tipo_prod` VARCHAR(45),
+  `Fecha_prod` DATE,
   PRIMARY KEY (`Nro_prod`)
   );
 
@@ -184,13 +184,13 @@ CREATE TABLE IF NOT EXISTS `Productos` (
 
 CREATE TABLE IF NOT EXISTS `Proveedores` (
   `Nro_prov` INT NOT NULL,
-  `Nombre` VARCHAR(45) NULL,
-  `Apellido` VARCHAR(45) NULL,
-  `Telefono` INT NULL,
-  `Email` VARCHAR(45) NULL,
-  `Direccion` VARCHAR(45) NULL,
-  `tipo_prov` VARCHAR(45) NULL,
-  `Cel_prov` INT NULL,
+  `Nombre` VARCHAR(45) NOT NULL,
+  `Apellido` VARCHAR(45) NOT NULL,
+  `Telefono` INT NOT NULL,
+  `Email` VARCHAR(45) NOT NULL,
+  `Direccion` VARCHAR(45) NOT NULL,
+  `tipo_prov` VARCHAR(45),
+  `Cel_prov` INT NOT NULL,
   PRIMARY KEY (`Nro_prov`)
   );
 
@@ -200,13 +200,13 @@ CREATE TABLE IF NOT EXISTS `Proveedores` (
 
 CREATE TABLE IF NOT EXISTS `Orden_Prod` (
   `Nro_orden` INT NOT NULL,
-  `Precio_orden` DECIMAL(1) NULL,
-  `Cant_orden` INT NULL,
-  `Fecha_p` DATE NULL,
-  `Loc` VARCHAR(45) NULL,
-  `CUIT_orden` INT NULL,
-  `Cel_orden` INT NULL,
-  `Lugar_entrega` VARCHAR(45) NULL,
+  `Precio_orden` DECIMAL(1) NOT NULL,
+  `Cant_orden` INT NOT NULL,
+  `Fecha_p` DATE NOT NULL,
+  `Loc` VARCHAR(45) NOT NULL,
+  `CUIT_orden` INT NOT NULL,
+  `Cel_orden` INT NOT NULL,
+  `Lugar_entrega` VARCHAR(45) NOT NULL,
   `Nro_prod` INT NOT NULL,
   `Nro_prov` INT NOT NULL,
   `Nro_suc` INT NOT NULL,
@@ -241,7 +241,7 @@ CREATE TABLE IF NOT EXISTS `Facturas` (
 CREATE TABLE IF NOT EXISTS `Uso_Productos` (
   `Nuro_usoProd` INT NOT NULL,
   `cantidad` INT NULL,
-  `precio` DECIMAL NULL,
+  `precio` DECIMAL NOT NULL,
   `Nro_prod` INT NOT NULL,
   `Nro_servicio` INT NOT NULL,
   PRIMARY KEY (`Nuro_usoProd`, `Nro_prod`, `Nro_servicio`),
@@ -257,20 +257,20 @@ CREATE TABLE IF NOT EXISTS `Uso_Productos` (
 
 CREATE TABLE IF NOT EXISTS `Maquinas` (
   `Num_maq` INT NOT NULL,
-  `Nombre_maq` VARCHAR(45) NULL,
-  `Tipo_maq` VARCHAR(45) NULL,
-  `Tiempo_uso` VARCHAR(45) NULL,
-  `F_ingreso` DATE NULL,
-  `Marca_maq` VARCHAR(45) NULL,
-  `Color_maq` VARCHAR(45) NULL,
-  `Modelo_maq` VARCHAR(45) NULL,
-  `Potencia_maq` VARCHAR(45) NULL,
-  `Precio_maq` DECIMAL(1) NULL,
-  `Peso` DECIMAL(1) NULL,
-  `Descripcion` VARCHAR(45) NULL,
-  `Garantia` VARCHAR(45) NULL,
-  `Ultimo_mantenimiento` DATE NULL,
-  `Estado` VARCHAR(45) NULL,
+  `Nombre_maq` VARCHAR(45) NOT NULL,
+  `Tipo_maq` VARCHAR(45) NOT NULL,
+  `Tiempo_uso` VARCHAR(45),
+  `F_ingreso` DATE,
+  `Marca_maq` VARCHAR(45),
+  `Color_maq` VARCHAR(45),
+  `Modelo_maq` VARCHAR(45) NOT NULL,
+  `Potencia_maq` VARCHAR(45) NOT NULL,
+  `Precio_maq` DECIMAL(1) NOT NULL,
+  `Peso` DECIMAL(1),
+  `Descripcion` VARCHAR(45),
+  `Garantia` VARCHAR(45) NOT NULL,
+  `Ultimo_mantenimiento` DATE NOT NULL,
+  `Estado` VARCHAR(45),
   `Nro_prov` INT NOT NULL,
   `Sucursales_Nro_suc` INT NOT NULL,
   PRIMARY KEY (`Num_maq`, `Nro_prov`, `Sucursales_Nro_suc`),
@@ -294,4 +294,3 @@ CREATE TABLE IF NOT EXISTS `uso_maquinas` (
     FOREIGN KEY (`Nro_serv`)
     REFERENCES `Orden_Servicios` (`Nro_serv`)
     );
-
